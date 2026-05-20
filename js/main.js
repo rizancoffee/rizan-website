@@ -40,24 +40,21 @@ const translations = {
         whyus_c4_title: "سهولة التواصل معنا",
         whyus_c4_desc: "فريق خدمة العملاء متواجد على مدار الساعة للرد على استفساراتكم وتلبية طلباتكم وتعديلها.",
         vision_title: "رؤيتنا",
-        vision_desc: "أن تكون خدمتنا الخيار الأفضل لتشغيل وإدارة الكورنرات المتنقلة في المملكة العربية السعودية، وأن نستمر في تحسين عملنا لتقديم خدمة أفضل.",
-        vision_quote: "العميل يأتي أولاً وقبل كل شيء",
-        mission_title: "مهمتنا",
-        mission_desc: "أن نكون الكاترينق الأكثر موثوقية وقياسية في المملكة العربية السعودية. التميز والاحترافية والتطور لزيادة التوقعات لعملائنا الكرام، وسنتخذ كل الخطوات اللازمة لتحقيق رؤيتنا.",
+        vision_desc: "أن تكون خدمتنا الخيار الأفضل لتشغيل وإدارة الكورنرات المتنقلة في المملكة العربية السعودية، وأن نستمر في تحسين عملنا لتقديم خدمة أفضل.<br><br>إيماننا الراسخ هو <strong class=\"text-gold\">العميل يأتي أولاً وقبل كل شيء</strong>.<br><br>تتمثل مهمة RIZAN CAFE في أن نكون الكاترينق الأكثر موثوقية وقياسية في المملكة العربية السعودية. التميز والاحترافية والتطور لزيادة التوقعات لكل من عملائنا الكرام ورعايتهم، وسنتخذ كل الخطوات اللازمة لتحقيق رؤيتنا.",
         goal_title: "هدفنا",
-        goal_desc: "وضع علامة تجارية باسم RIZAN CAFE على أنها أفضل مزود لحلول الكاترينق المتنقل في تقديم القهوة المختصة، والارتقاء إلى أعلى مستوى؛ تأكيداً وإظهاراً للإخلاص الذي لا يتزعزع لعملاء الأعمال.",
+        goal_desc: "يتمثل هدف RIZAN CAFE في وضع علامة تجارية باسمها على أنها أفضل مزود لحلول الكاترينق المتنقل في تقديم القهوة المختصة والارتقاء إلى أعلى مستوى، وهذا للتأكيد ولإظهار الإخلاص الذي لا يتزعزع لعملاء الأعمال.",
         services_title: "خدماتنا المميزة",
         services_subtitle: "نجمع بين الرقي والاحترافية لتلبية كافة تطلعاتكم",
         service_readmore: "اقرأ المزيد",
         service_request: "طلب الخدمة",
         service_1_title: "كاترينق القهوة",
-        service_1_desc: "نتميز في تقديم مشروبات القهوة المختصة الساخنة والباردة بأجود المحاصيل والبن الفاخر، مع منيو تفاعلي وأجهزة احترافية متكاملة لضيوفكم.",
+        service_1_desc: "نقدم تجربة ضيافة استثنائية متكاملة عبر تحضير القهوة المختصة الباردة والساخنة بأيدي أمهر الباريستا. نستخدم أجود محاصيل البن الفاخرة المعتمدة مع منيو تفاعلي وأجهزة عالمية حديثة لضمان مذاق رائع لضيوفكم.",
         service_2_title: "كاترينق العطور",
-        service_2_desc: "فكرة مبتكرة لتقديم العطور والبخور وتطييب الضيوف في المناسبات الكبرى والنسائية بأسلوب فريد وراقٍ يعكس كرم ضيافتكم.",
+        service_2_desc: "نبتكر مفهوماً فاخراً لتطييب الضيوف في مناسباتكم الكبرى والنسائية. نوفر تشكيلة من أفخر أنواع العطور والبخور والعود الفواح لتعطير الأجواء وإضفاء طابع من الهيبة والجمال الذي يعكس كرم ضيافتكم الأصيل.",
         service_3_title: "تصاميم أكواب خاصة",
-        service_3_desc: "نقوم بإنشاء وتصميم الأكواب والمنيو بألوانكم وشعاراتكم الخاصة، مع خدمة طباعة الصور والأسماء الفورية على رغوة القهوة لضيوفكم.",
+        service_3_desc: "نمنح مناسبتكم هوية فريدة عبر تصميم وتخصيص الأكواب والمنيو بألوانكم وشعاراتكم الخاصة. نتميز بخدمة الطباعة الفورية للصور والأسماء بدقة متناهية على رغوة القهوة لإثارة دهشة الحاضرين.",
         service_4_title: "نافورة الشوكولاتة",
-        service_4_desc: "نافورة من الشوكولاتة البلجيكية الغنية والفاخرة، تقدم مع تشكيلة من الفواكه الطازجة مثل الفراولة والحلويات المتنوعة لإضفاء متعة مميزة.",
+        service_4_desc: "نضفي لمسة من البهجة والمتعة البصرية بمناسباتكم عبر نافورة الشوكولاتة البلجيكية الغنية والدافئة. نقدمها مع تشكيلة واسعة من الفواكه الطازجة كالفراولة اللذيذة والحلويات الفاخرة لتجربة تذوق ممتعة.",
         targets_title: "الفئات المستهدفة",
         targets_subtitle: "نتشرف بخدمتكم في مختلف القطاعات والمناسبات",
         target_g1: "الفنادق",
@@ -137,24 +134,21 @@ const translations = {
         whyus_c4_title: "Easy Communication",
         whyus_c4_desc: "Our customer service team is available around the clock to answer your inquiries and meet/modify your requests.",
         vision_title: "Our Vision",
-        vision_desc: "To be the preferred choice for operating and managing mobile corners in the Kingdom of Saudi Arabia, and to continuously improve our work to provide the best service.",
-        vision_quote: "Customer comes first and foremost",
-        mission_title: "Our Mission",
-        mission_desc: "To be the most reliable and standard catering service in Saudi Arabia. Striving for excellence, professionalism, and innovation to exceed the expectations of our valued clients, taking every step necessary to achieve our vision.",
+        vision_desc: "To be the preferred choice for operating and managing mobile corners in the Kingdom of Saudi Arabia, and to continuously improve our work to provide the best service.<br><br>Our firm belief is <strong class=\"text-gold\">Customer comes first and foremost</strong>.<br><br>The mission of RIZAN CAFE is to be the most reliable and standard catering service in Saudi Arabia. Striving for excellence, professionalism, and innovation to exceed the expectations of our valued clients, taking every step necessary to achieve our vision.",
         goal_title: "Our Goal",
-        goal_desc: "To establish RIZAN CAFE as the best provider of mobile specialty coffee catering solutions and rise to the highest level, demonstrating unwavering dedication to our business clients.",
+        goal_desc: "The goal of RIZAN CAFE is to establish its brand name as the best provider of mobile catering solutions in serving specialty coffee, and to rise to the highest level, to confirm and demonstrate the unwavering dedication to business clients.",
         services_title: "Our Services",
         services_subtitle: "We combine elegance and professionalism to meet all your expectations",
         service_readmore: "Read More",
         service_request: "Request Service",
         service_1_title: "Coffee Catering",
-        service_1_desc: "We excel in providing hot and cold specialty coffee drinks with the finest crops and premium beans, interactive menu, and integrated professional equipment.",
+        service_1_desc: "We provide an exceptional catering experience of hot and cold specialty coffee crafted by expert baristas. Using premium certified coffee beans with interactive menus and professional state-of-the-art equipment to impress your guests.",
         service_2_title: "Perfume Catering",
-        service_2_desc: "An innovative concept to present perfumes, incense, and guest hospitality at major events and ladies parties in a unique style.",
+        service_2_desc: "We create a luxurious experience to scent and welcome your guests at premium and ladies events. Offering a curated selection of elite perfumes, aromatic incense, and rich oud to fill the air with absolute elegance.",
         service_3_title: "Custom Cup Designs",
-        service_3_desc: "We design and create cups and menus in your own colors and logos, with live photo/name printing on the coffee foam.",
+        service_3_desc: "Give your event a custom identity by designing cups and menus with your colors and logos. We feature live instant printing of photos, names, and logos on the coffee foam to amaze your guests and create memorable moments.",
         service_4_title: "Chocolate Fountain",
-        service_4_desc: "A fountain of rich and premium Belgian chocolate, served with a selection of fresh fruits like strawberries and sweets.",
+        service_4_desc: "Add a touch of sweetness and visual joy with our rich, warm Belgian chocolate fountain. Served with a premium selection of fresh strawberries and gourmet confectionery to offer an unforgettable dessert experience.",
         targets_title: "Target Groups",
         targets_subtitle: "We are honored to serve you across various sectors and events",
         target_g1: "Hotels",
@@ -207,10 +201,11 @@ function setLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-            if (key === 'footer_text') {
-                element.innerHTML = translations[lang][key];
+            const val = translations[lang][key];
+            if (key === 'footer_text' || (val.includes('<') && val.includes('>'))) {
+                element.innerHTML = val;
             } else {
-                element.textContent = translations[lang][key];
+                element.textContent = val;
             }
         }
     });

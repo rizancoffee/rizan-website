@@ -91,8 +91,15 @@ body {
    TYPOGRAPHY & UTILITIES
 ========================================== */
 section {
-    padding: 100px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
 }
 
 .section-title {
@@ -121,6 +128,11 @@ section {
     text-align: center;
     margin-bottom: 60px;
     transition: color 0.4s ease;
+}
+
+.text-gold {
+    color: var(--primary-color) !important;
+    font-weight: 800;
 }
 
 /* ==========================================
@@ -321,6 +333,7 @@ section {
     text-align: center;
     position: relative;
     overflow: hidden;
+    padding: 0 !important;
 }
 
 .slideshow-container {
@@ -636,10 +649,9 @@ html[dir="ltr"] .explore-btn:hover i {
 }
 
 .vision-grid {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 40px;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .vision-card {
@@ -648,8 +660,8 @@ html[dir="ltr"] .explore-btn:hover i {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 20px;
-    padding: 50px 40px;
-    text-align: center;
+    padding: 40px;
+    text-align: start;
     transition: var(--transition-smooth);
 }
 
@@ -659,7 +671,7 @@ body.dark-theme .vision-card {
 }
 
 .vision-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     background-color: rgba(255, 255, 255, 0.08);
     border-color: var(--primary-color);
     box-shadow: 0 10px 30px rgba(229, 186, 65, 0.1);
@@ -667,11 +679,6 @@ body.dark-theme .vision-card {
 
 body.dark-theme .vision-card:hover {
     background-color: rgba(24, 21, 18, 0.6);
-}
-
-/* الكارت الكبير (رؤية) */
-.vision-card--wide {
-    text-align: start;
 }
 
 /* هيدر البطاقة: أيقونة + عنوان جنباً لجنب */
@@ -688,15 +695,6 @@ body.dark-theme .vision-card:hover {
     flex-shrink: 0;
 }
 
-.vision-card--wide .vision-icon {
-    margin-bottom: 0;
-}
-
-.vision-card:not(.vision-card--wide) .vision-card-header {
-    justify-content: center;
-    text-align: center;
-}
-
 .vision-card h3 {
     font-size: 1.6em;
     font-weight: 800;
@@ -705,56 +703,14 @@ body.dark-theme .vision-card:hover {
 }
 
 .vision-card p {
-    font-size: 1em;
+    font-size: 1.05em;
     color: #dfdfdf;
-    line-height: 1.95;
+    line-height: 2.0;
+    margin-bottom: 18px;
+}
+
+.vision-card p:last-child {
     margin-bottom: 0;
-}
-
-/* فاصل ذهبي */
-.vision-divider {
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(229, 186, 65, 0.5) 30%, rgba(229, 186, 65, 0.5) 70%, transparent);
-    margin: 26px 0;
-}
-
-/* اقتباس العميل أولاً */
-.vision-quote {
-    position: relative;
-    background: linear-gradient(135deg, rgba(229, 186, 65, 0.13), rgba(229, 186, 65, 0.05));
-    border: 1.5px solid rgba(229, 186, 65, 0.4);
-    border-radius: 16px;
-    padding: 20px 26px;
-    text-align: center;
-    margin: 0;
-    box-shadow: 0 4px 24px rgba(229, 186, 65, 0.08), inset 0 1px 0 rgba(229, 186, 65, 0.12);
-}
-
-.vision-quote-icon {
-    font-size: 1.2em;
-    color: var(--primary-color);
-    opacity: 0.5;
-    display: block;
-    margin-bottom: 8px;
-}
-
-.vision-quote span {
-    font-size: 1.3em;
-    font-weight: 800;
-    color: var(--primary-color);
-    letter-spacing: 0.5px;
-    display: block;
-    margin-bottom: 8px;
-    text-shadow: 0 0 20px rgba(229, 186, 65, 0.25);
-}
-
-.vision-quote small {
-    font-size: 0.78em;
-    color: rgba(229, 186, 65, 0.55);
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
 }
 
 /* ==========================================
@@ -773,7 +729,8 @@ body.dark-theme .vision-card:hover {
 
 .flip-card {
     perspective: 1000px;
-    height: 400px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 .flip-card-inner {
@@ -792,6 +749,8 @@ body.dark-theme .vision-card:hover {
 
 .flip-card-front, .flip-card-back {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
@@ -807,30 +766,37 @@ body.dark-theme .vision-card:hover {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding: 40px 20px;
+    padding: 30px 15px;
     position: relative;
 }
 
 .flip-card-front h3 {
     color: #ffffff;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 700;
     text-shadow: 0 2px 8px rgba(0,0,0,0.8);
     position: relative;
     z-index: 2;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .flip-btn {
     background-color: var(--primary-color);
     color: #1a1a1a;
-    padding: 8px 20px;
+    padding: 6px 18px;
     border-radius: 20px;
-    font-size: 0.85em;
+    font-size: 0.8em;
     font-weight: 700;
     transition: var(--transition-smooth);
     position: relative;
     z-index: 2;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+}
+
+.flip-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
 }
 
 .flip-card-back {
@@ -842,7 +808,7 @@ body.dark-theme .vision-card:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 25px;
+    padding: 25px 20px;
     border: 2px solid var(--primary-color);
     transition: background-color 0.4s ease, color 0.4s ease;
 }
@@ -850,38 +816,21 @@ body.dark-theme .vision-card:hover {
 .flip-card-back i {
     font-size: 3em;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    transition: transform 0.4s ease;
 }
 
-.flip-card-back h3 {
-    font-size: 1.4em;
-    font-weight: 700;
-    margin-bottom: 15px;
+.flip-card:hover .flip-card-back i {
+    transform: scale(1.1);
 }
 
 .flip-card-back p {
-    font-size: 0.95em;
+    font-size: 0.85em;
     color: var(--text-secondary);
-    margin-bottom: 25px;
     line-height: 1.6;
+    margin: 0;
     transition: color 0.4s ease;
-}
-
-.card-action-btn {
-    text-decoration: none;
-    background-color: var(--primary-color);
-    color: #1a1a1a;
-    padding: 10px 25px;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 0.9em;
-    transition: var(--transition-smooth);
-    border: 1px solid var(--primary-color);
-}
-
-.card-action-btn:hover {
-    background-color: transparent;
-    color: var(--primary-color);
 }
 
 /* ==========================================
@@ -1041,7 +990,6 @@ body.dark-theme .logo-wrapper {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 80px 0;
     color: #1a1a1a;
 }
 
@@ -1397,11 +1345,18 @@ body.dark-theme .logo-wrapper {
     .brand-taglines h2 {
         font-size: 1.6em;
     }
+    
 }
 
 @media (max-width: 768px) {
     section {
-        padding: 60px 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 80px; /* Offset for header on mobile */
+        padding-bottom: 40px;
     }
     
     .grid-2 {
