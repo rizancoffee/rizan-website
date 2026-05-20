@@ -1,166 +1,454 @@
 <!DOCTYPE html>
-
-<html lang="ar">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizan Coffee | كاترينق القهوة المتنقل</title>
+    <link rel="icon" type="image/png" href="assets/Images/favicon.png">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style -->
     <link rel="stylesheet" href="style.css">
-    <title>Rizan Coffee</title>
 </head>
 
 <body>
 
+    <!-- الترويسة (Header) -->
     <header class="header" id="header">
-        <a href="#" class="logo"><img src="assets/Images/logo2.png" alt="Italian Trulli"></a>
+        <a href="#" class="logo">
+            <img src="assets/Images/logo_transparent.png" alt="Rizan Cafe Logo">
+        </a>
         <nav class="navigation">
-            <a href="#intro">المقدمة</a>
-            <a href="#TheStory">القصة</a>
-            <a href="#WhoWeAre">من نحن؟</a>
-            <a href="#WhyUs">لماذا نحن؟</a>
-            <a href="#VisionGoal">رؤيتنا وهدفنا</a>
-            <a href="#Services">خدماتنا</a>
-            <a href="#TargetGroups">الفئات المستهدفة</a>
-            <a href="#whereWeAre">أماكن تواجدنا</a>
-            <a href="#PartnersSuccess">شركاء نجاحنا</a>
-            <a href="#OurNumbers">نحن في أرقام</a>
-            <a href="#Contact">تواصل معنا</a>
+            <a href="#intro" data-i18n="nav_intro">المقدمة</a>
+            <a href="#TheStory" data-i18n="nav_story">القصة</a>
+            <a href="#WhoWeAre" data-i18n="nav_whoweare">من نحن؟</a>
+            <a href="#WhyUs" data-i18n="nav_whyus">لماذا نحن؟</a>
+            <a href="#Services" data-i18n="nav_services">خدماتنا</a>
+            <a href="#TargetGroups" data-i18n="nav_targets">الفئات المستهدفة</a>
+            <a href="#PartnersSuccess" data-i18n="nav_partners">عملائنا</a>
+            <a href="#OurNumbers" data-i18n="nav_numbers">أرقامنا</a>
+            <a href="#Contact" data-i18n="nav_contact">تواصل معنا</a>
         </nav>
+        <div class="header-actions">
+            <button id="lang-toggle" class="lang-toggle-btn">EN</button>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="تبديل المظهر">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </header>
 
-
-
+    <!-- المقدمة (Hero Section) -->
     <section class="intro" id="intro">
-
-        <div class="bg-line-horizontal1"></div>
-        <div class="bg-line-vertical1"></div>
-        <div class="bg-line-vertical2"></div>
-        <div class="bg-line-vertical3"></div>
-
-        <div class="intro-photos">
-            <div class="image-frame1"><img class="intro-image" src="assets/Images/015.jpeg" alt=""></div>
-            <div class="image-frame2"><img class="intro-image" src="assets/Images/019.jpeg" alt=""></div>
-            <div class="image-frame3"><img class="intro-image" src="assets/Images/009.jpeg" alt=""></div>
-            <div class="image-frame4"><img class="intro-image" src="assets/Images/008.jpeg" alt=""></div>
-            <div class="image-frame5"><img class="intro-image" src="assets/Images/026.jpeg" alt=""></div>
-            <div class="image-frame6"><img class="intro-image" src="assets/Images/006.jpeg" alt=""></div>
+        <div class="slideshow-container">
+            <div class="slide fade active" style="background-image: url('assets/Images/002.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/003.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/004.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/005.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/006.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/007.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/008.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/009.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/010.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/011.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/012.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/013.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/014.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/015.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/016.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/017.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/018.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/019_cropped.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/020.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/021.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/022.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/023.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/024.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/025.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/026.jpeg');"></div>
+            <div class="slide fade" style="background-image: url('assets/Images/028.jpeg');"></div>
         </div>
-
+        <div class="intro-overlay"></div>
         <div class="brand-taglines">
-            <h1>كاترينق القهوة المتنقل</h1>
-            <h2 style=" background-color: white;">شريك مناسباتكم السعيدة</h2>
-            <h3>نتميز في تقديم مشروبات القهوة المختصة وخدمة الكونر المتنقل</h3>
-            <img class="intro-logo" src="assets/Images/logo1.png" alt="">
+            <img class="intro-logo" src="assets/Images/logo_transparent.png" alt="Rizan Cafe Logo">
+            <h1 data-i18n="hero_title">كاترينق القهوة المتنقل</h1>
+            <h2 data-i18n="hero_subtitle">شريك مناسباتكم السعيدة</h2>
+            <h3 data-i18n="hero_tagline">نتميز في تقديم مشروبات القهوة المختصة وخدمة الكورنر المتنقل</h3>
+            <a href="#Services" class="explore-btn" id="explore-btn"><span data-i18n="hero_btn">اكتشف خدماتنا</span> <i class="fas fa-arrow-left" id="explore-icon"></i></a>
         </div>
     </section>
 
+    <!-- القصة (The Story) -->
     <section class="the-story-section" id="TheStory">
-
-        <div class="bg-line-horizontal2"></div>
-
-        <div class="the-story-image-frame"><img class="the-story-image" src="assets/Images/017.jpeg" alt=""></div>
-
-        <div class="the-story-container">
-            <p class="the-story-heading">القصة</p>
-            <p class="the-story-artical">-بدأت الرحلة كفكرة للعمل على تطوير خدمات تقديم القهوة والمشروبات الباردة في المؤتمرات والحفلات والمناسبات النسائية.</p>
-            <p class="the-story-artical">-ومن ثم أستمعنا بعناية الحتياجات السوق ووجدنا الفرصة لتقديم خدمتنا كاترينق متنقل للقهوة المختصة.</p>
-            <p class="the-story-artical">-في عام 2023 تأسست إدارة خدمة الكاترينق المتنقل على يد رائدة أعمال أرادت إحداث تغير في طريقة تقديم القهوة في المملكة العربية السعودية ومن خالل حرصها على الممارسات التجارية الذكية توصل فريق RIZAN CAFE إلى فكرة تحويل المقهى إلى كورنر متنقل بحيث نوفر لكم كافي متكامل داخل مقر مناسبتك.</p>
+        <div class="container grid-2">
+            <div class="the-story-image-frame reveal">
+                <img class="the-story-image" src="assets/Images/017.jpeg" alt="قصة ريزان كافيه">
+            </div>
+            <div class="the-story-container reveal">
+                <p class="the-story-heading" data-i18n="story_title">القصة</p>
+                <div class="story-content">
+                    <p><i class="fas fa-mug-hot"></i> <span data-i18n="story_p1">بدأت الرحلة كفكرة للعمل على تطوير خدمات تقديم القهوة والمشروبات الباردة في المؤتمرات والحفلات والمناسبات النسائية.</span></p>
+                    <p><i class="fas fa-chart-line"></i> <span data-i18n="story_p2">ومن ثم استمعنا بعناية لاحتياجات السوق ووجدنا الفرصة لتقديم خدمتنا كاترينق متنقل للقهوة المختصة.</span></p>
+                    <p><i class="fas fa-award"></i> <span data-i18n="story_p3">في عام 2023 تأسست إدارة خدمة الكاترينق المتنقل على يد رائدة أعمال أرادت إحداث تغيير في طريقة تقديم القهوة في المملكة العربية السعودية. ومن خلال حرصها على الممارسات التجارية الذكية توصل فريق RIZAN CAFE إلى فكرة تحويل المقهى إلى كورنر متنقل بحيث نوفر لكم كافي متكامل داخل مقر مناسبتك.</span></p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- من نحن؟ (Who We Are) -->
     <section class="who-we-are" id="WhoWeAre">
-
-        <div class="bg-line-horizontal3"></div>
-        
-        <div class="who-we-are-photos">
-            <div class="who-we-are-image-frame1"><img class="who-we-are-image" src="assets/Images/020.jpeg" alt=""></div>
-            <div class="who-we-are-image-frame2" style=" margin-right: 100px;"><img class="who-we-are-image" src="assets/Images/021.jpeg" alt=""></div>
-            <div class="who-we-are-image-frame3"><img class="who-we-are-image" src="assets/Images/001.jpeg" alt=""></div>
-        </div>
-
-        <div class="who-we-are-container">
-            <p class="who-we-are-heading">من نحن؟</p>
-            <p class="who-we-are-artical">-نحن شركة سعودية رائدة في مجال الكافيهات المتنقلة في المملكة العربية السعودية.</p>
-            <p class="who-we-are-artical">-متخصصون في تقديم كاترينق كافي متكامل في مقر مناسبتك ونقدم المشروبات الباردة والحارة بـ أجود أنواع البن المختص.</p>
-            <p class="who-we-are-artical">-نحن قادرين على إنشاء وتنفيذ تصاميمكم الخاصة في األكواب والمنــيو وإضافافات على الكاترينق بألوانكم الخاصة.</p>
-            <p class="who-we-are-artical">-نستخدم أحدث أنواع األجهزه في تقديم خدماتنا مثل:</p>
-            <p class="who-we-are-artical">1-عرض المنيو على شاشة تفاعلية.</p>
-            <p class="who-we-are-artical">2-مكينة قهوة محترفة.</p>
-            <p class="who-we-are-artical">3-آلة طباعة محترفة لطباعة الصور، الأسماء، والأحرف.</p>
+        <div class="container grid-2">
+            <div class="who-we-are-container reveal">
+                <p class="who-we-are-heading" data-i18n="who_title">من نحن؟</p>
+                <div class="story-content">
+                    <p><i class="fas fa-check-circle"></i> <span data-i18n="who_p1">نحن شركة سعودية رائدة في مجال الكافيهات المتنقلة في المملكة العربية السعودية.</span></p>
+                    <p><i class="fas fa-check-circle"></i> <span data-i18n="who_p2">متخصصون في تقديم كاترينق كافي متكامل في مقر مناسبتك ونقدم المشروبات الباردة والحارة بأجود أنواع البن المختص.</span></p>
+                    <p><i class="fas fa-check-circle"></i> <span data-i18n="who_p3">نحن قادرون على إنشاء وتنفيذ تصاميمكم الخاصة في الأكواب والمنيو وإضافات على الكاترينق بألوانكم الخاصة.</span></p>
+                    <p><i class="fas fa-microchip"></i> <span data-i18n="who_devices_header">نستخدم أحدث أنواع الأجهزة في تقديم خدماتنا مثل:</span></p>
+                    <ul class="devices-list">
+                        <li><i class="fas fa-display"></i> <span data-i18n="who_device_1">عرض المنيو على شاشة تفاعلية.</span></li>
+                        <li><i class="fas fa-mug-saucer"></i> <span data-i18n="who_device_2">مكينة قهوة محترفة.</span></li>
+                        <li><i class="fas fa-camera-retro"></i> <span data-i18n="who_device_3">آلة طباعة محترفة لطباعة الصور، الأسماء، والأحرف على رغوة القهوة.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="who-we-are-photos reveal">
+                <div class="photo-grid">
+                    <div class="who-we-are-image-frame"><img class="who-we-are-image" src="assets/Images/020.jpeg" alt="ريزان كافيه"></div>
+                    <div class="who-we-are-image-frame"><img class="who-we-are-image" src="assets/Images/021.jpeg" alt="فريق عمل ريزان"></div>
+                    <div class="who-we-are-image-frame"><img class="who-we-are-image" src="assets/Images/001.jpeg" alt="كورنر ريزان كافيه"></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="sections-container">
-
-        <div class="section-container">
-            <div class="secctions-adress" id="WhyUs"><p>لماذا نحن ؟</p></div>
-            <section class="why-us">
-                <img class="section-background" src="assets/Images/019.jpeg" alt="">
-                <p>لماذا نحن ؟</p>
-            </section>
+    <!-- لماذا نحن؟ (Why Us) -->
+    <section class="why-us-section" id="WhyUs">
+        <div class="container">
+            <h2 class="section-title reveal" data-i18n="whyus_title">لماذا نحن؟</h2>
+            <p class="section-subtitle reveal" data-i18n="whyus_subtitle">سر تميزنا واختيار عملائنا لنا</p>
+            <div class="why-us-grid">
+                <div class="why-us-card reveal">
+                    <div class="card-icon"><i class="fa-solid fa-credit-card"></i></div>
+                    <h3 data-i18n="whyus_c1_title">دفع آلي سهل</h3>
+                    <p data-i18n="whyus_c1_desc">نوفر حلول دفع رقمية متكاملة وسريعة لخدمة ضيوفكم وتسهيل التعامل المالي.</p>
+                </div>
+                <div class="why-us-card reveal">
+                    <div class="card-icon"><i class="fa-solid fa-gift"></i></div>
+                    <h3 data-i18n="whyus_c2_title">هدايا وخدمات مجانية</h3>
+                    <p data-i18n="whyus_c2_desc">نحرص على تقديم إضافات مميزة وهدايا مجانية تضفي بهجة إضافية على مناسبتكم.</p>
+                </div>
+                <div class="why-us-card reveal">
+                    <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3 data-i18n="whyus_c3_title">التنظيم والترتيب والسرعة</h3>
+                    <p data-i18n="whyus_c3_desc">نعمل باحترافية عالية تضمن سرعة التحضير والتقديم مع الحفاظ على النظافة والترتيب المطلق.</p>
+                </div>
+                <div class="why-us-card reveal">
+                    <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3 data-i18n="whyus_c4_title">سهولة التواصل معنا</h3>
+                    <p data-i18n="whyus_c4_desc">فريق خدمة العملاء متواجد على مدار الساعة للرد على استفساراتكم وتلبية طلباتكم وتعديلها.</p>
+                </div>
+            </div>
         </div>
-
-        <div class="section-container">
-            <div class="secctions-adress" id="VisionGoal"><p>رؤيتنا وهدفنا</p></div>
-            <section class="vision-goal">
-                <img class="section-background" src="assets/Images/019.jpeg" alt="">
-                <p>رؤيتنا وهدفنا</p>
-            </section>
-        </div>
-
-        <div class="section-container">
-            <div class="secctions-adress" id="Services"><p>خدماتنا</p></div>
-            <section class="services">
-                <img class="section-background" src="assets/Images/019.jpeg" alt="">
-                <p>خدماتنا</p>
-            </section>
-        </div>
-
-        <div class="section-container">
-            <div class="secctions-adress" id="TargetGroups"><p>الفئات المستهدفة</p></div>
-            <section class="target-groups">
-                <img class="section-background" src="assets/Images/019.jpeg" alt="">
-                <p>الفئات المستهدفة</p>
-            </section>
-        </div>
-
-        <div class="section-container">
-            <div class="secctions-adress" id="whereWeAre"><p>اماكن تواجدنا</p></div>
-            <section class="where-we-are">
-                <img class="section-background" src="assets/Images/019.jpeg" alt="">
-                <p> اماكن تواجدنا</p>
-            </section>
-        </div>
-
-        <div class="section-container">
-            <div class="secctions-adress" id="PartnersSuccess"><p>شركاء النجاح</p></div>
-            <section class="partners-success">
-                <img class="section-background" src="assets/Images/019.jpeg" alt="">
-                <p>شركاء النجاح</p>
-            </section>
-        </div>
-
-        <div class="section-container">
-            <div class="secctions-adress" id="OurNumbers"><p>نحن في ارقام</p></div>
-            <section class="our-numbers">
-                <img class="section-background" src="assets/Images/019.jpeg" alt="">
-                <p>نحن في ارقام</p>
-            </section>
-        </div>
-
     </section>
 
-    <section class="contact" id="Contact">
-        <p>تواصل معنا</p>
+    <!-- رؤيتنا وهدفنا -->
+    <section class="vision-section" id="VisionGoal">
+        <div class="container">
+            <div class="vision-grid">
+
+                <!-- بطاقة الرؤية (رؤية + مهمة مدموجة كما في البي دي اف) -->
+                <div class="vision-card vision-card--wide reveal">
+                    <div class="vision-card-header">
+                        <div class="vision-icon"><i class="fas fa-eye"></i></div>
+                        <h3 data-i18n="vision_title">رؤيتنا</h3>
+                    </div>
+
+                    <p data-i18n="vision_desc">أن تكون خدمتنا الخيار الأفضل لتشغيل وإدارة الكورنرات المتنقلة في المملكة العربية السعودية، وأن نستمر في تحسين عملنا لتقديم خدمة أفضل.</p>
+
+                    <blockquote class="vision-quote">
+                        <i class="fas fa-quote-right vision-quote-icon"></i>
+                        <span data-i18n="vision_quote">العميل يأتي أولاً وقبل كل شيء</span>
+                        <br>
+                        <small>RIZAN CAFE</small>
+                    </blockquote>
+
+                    <div class="vision-divider"></div>
+
+                    <p data-i18n="mission_desc">أن نكون الكاترينق الأكثر موثوقية وقياسية في المملكة العربية السعودية. التميز والاحترافية والتطور لزيادة التوقعات لعملائنا الكرام، وسنتخذ كل الخطوات اللازمة لتحقيق رؤيتنا.</p>
+                </div>
+
+                <!-- بطاقة الهدف -->
+                <div class="vision-card reveal">
+                    <div class="vision-card-header">
+                        <div class="vision-icon"><i class="fas fa-award"></i></div>
+                        <h3 data-i18n="goal_title">هدفنا</h3>
+                    </div>
+                    <p data-i18n="goal_desc">وضع علامة تجارية باسم RIZAN CAFE على أنها أفضل مزود لحلول الكاترينق المتنقل في تقديم القهوة المختصة، والارتقاء إلى أعلى مستوى؛ تأكيداً وإظهاراً للإخلاص الذي لا يتزعزع لعملاء الأعمال.</p>
+                </div>
+
+            </div>
+        </div>
     </section>
 
+    <!-- خدماتنا (Our Services) -->
+    <section class="services-section" id="Services">
+        <div class="container">
+            <h2 class="section-title reveal" data-i18n="services_title">خدماتنا المميزة</h2>
+            <p class="section-subtitle reveal" data-i18n="services_subtitle">نجمع بين الرقي والاحترافية لتلبية كافة تطلعاتكم</p>
+            <div class="services-grid">
+                
+                <!-- خدمة 1 -->
+                <div class="flip-card reveal">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('assets/Images/015.jpeg');">
+                            <h3 data-i18n="service_1_title">كاترينق القهوة</h3>
+                            <span class="flip-btn" data-i18n="service_readmore">اقرأ المزيد</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <i class="fas fa-mug-hot"></i>
+                            <h3 data-i18n="service_1_title">كاترينق القهوة</h3>
+                            <p data-i18n="service_1_desc">نتميز في تقديم مشروبات القهوة المختصة الساخنة والباردة بأجود المحاصيل والبن الفاخر، مع منيو تفاعلي وأجهزة احترافية متكاملة لضيوفكم.</p>
+                            <a href="#Contact" class="card-action-btn" data-i18n="service_request">طلب الخدمة</a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- خدمة 2 -->
+                <div class="flip-card reveal">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('assets/Images/017.jpeg');">
+                            <h3 data-i18n="service_2_title">كاترينق العطور</h3>
+                            <span class="flip-btn" data-i18n="service_readmore">اقرأ المزيد</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <i class="fas fa-spray-can-sparkles"></i>
+                            <h3 data-i18n="service_2_title">كاترينق العطور</h3>
+                            <p data-i18n="service_2_desc">فكرة مبتكرة لتقديم العطور والبخور وتطييب الضيوف في المناسبات الكبرى والنسائية بأسلوب فريد وراقٍ يعكس كرم ضيافتكم.</p>
+                            <a href="#Contact" class="card-action-btn" data-i18n="service_request">طلب الخدمة</a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- خدمة 3 -->
+                <div class="flip-card reveal">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('assets/Images/008.jpeg');">
+                            <h3 data-i18n="service_3_title">تصاميم أكواب خاصة</h3>
+                            <span class="flip-btn" data-i18n="service_readmore">اقرأ المزيد</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <i class="fas fa-palette"></i>
+                            <h3 data-i18n="service_3_title">تصاميم أكواب خاصة</h3>
+                            <p data-i18n="service_3_desc">نقوم بإنشاء وتصميم الأكواب والمنيو بألوانكم وشعاراتكم الخاصة، مع خدمة طباعة الصور والأسماء الفورية على رغوة القهوة لضيوفكم.</p>
+                            <a href="#Contact" class="card-action-btn" data-i18n="service_request">طلب الخدمة</a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- خدمة 4 -->
+                <div class="flip-card reveal">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('assets/Images/025.jpeg');">
+                            <h3 data-i18n="service_4_title">نافورة الشوكولاتة</h3>
+                            <span class="flip-btn" data-i18n="service_readmore">اقرأ المزيد</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <i class="fas fa-stroopwafel"></i>
+                            <h3 data-i18n="service_4_title">نافورة الشوكولاتة</h3>
+                            <p data-i18n="service_4_desc">نافورة من الشوكولاتة البلجيكية الغنية والفاخرة، تقدم مع تشكيلة من الفواكه الطازجة مثل الفراولة والحلويات المتنوعة لإضفاء متعة مميزة.</p>
+                            <a href="#Contact" class="card-action-btn" data-i18n="service_request">طلب الخدمة</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- الفئات المستهدفة (Target Groups) -->
+    <section class="target-groups-section" id="TargetGroups">
+        <div class="container">
+            <h2 class="section-title reveal" data-i18n="targets_title">الفئات المستهدفة</h2>
+            <p class="section-subtitle reveal" data-i18n="targets_subtitle">نتشرف بخدمتكم في مختلف القطاعات والمناسبات</p>
+            <div class="targets-grid">
+                <div class="target-card reveal">
+                    <div class="target-icon"><i class="fas fa-hotel"></i></div>
+                    <h4 data-i18n="target_g1">الفنادق</h4>
+                </div>
+                <div class="target-card reveal">
+                    <div class="target-icon"><i class="fas fa-umbrella-beach"></i></div>
+                    <h4 data-i18n="target_g2">المنتجعات</h4>
+                </div>
+                <div class="target-card reveal">
+                    <div class="target-icon"><i class="fas fa-users-viewfinder"></i></div>
+                    <h4 data-i18n="target_g3">المؤتمرات</h4>
+                </div>
+                <div class="target-card reveal">
+                    <div class="target-icon"><i class="fas fa-chess-queen"></i></div>
+                    <h4 data-i18n="target_g4">قاعات الاحتفالات</h4>
+                </div>
+                <div class="target-card reveal">
+                    <div class="target-icon"><i class="fas fa-scissors"></i></div>
+                    <h4 data-i18n="target_g5">الصالونات النسائية</h4>
+                </div>
+                <div class="target-card reveal">
+                    <div class="target-icon"><i class="fas fa-hospital-user"></i></div>
+                    <h4 data-i18n="target_g6">المستشفيات</h4>
+                </div>
+                <div class="target-card reveal">
+                    <div class="target-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h4 data-i18n="target_g7">الجامعات والمدارس</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- شركاء النجاح (Partners Success / Clients) -->
+    <section class="partners-section" id="PartnersSuccess">
+        <div class="container">
+            <h2 class="section-title reveal" data-i18n="partners_title">شركاء نجاحنا</h2>
+            <p class="section-subtitle reveal" data-i18n="partners_subtitle">فخورون بثقة كبرى الجهات والشركات بنا</p>
+            
+            <div class="partners-carousel reveal">
+                <div class="carousel-track">
+                    <div class="slide-logo"><div class="logo-wrapper"><img src="assets/Images/012.jpeg" alt="شريك نجاح"></div></div>
+                    <div class="slide-logo"><div class="logo-wrapper"><img src="assets/Images/013.jpeg" alt="شريك نجاح"></div></div>
+                    <div class="slide-logo"><div class="logo-wrapper"><img src="assets/Images/022.jpeg" alt="شريك نجاح"></div></div>
+                    <div class="slide-logo"><div class="logo-wrapper"><img src="assets/Images/028.jpeg" alt="شريك نجاح"></div></div>
+                    <div class="slide-logo"><div class="logo-wrapper"><img src="assets/Images/029.png" alt="شريك نجاح"></div></div>
+                    <div class="slide-logo"><div class="logo-wrapper"><img src="assets/Images/001.jpeg" alt="شريك نجاح"></div></div>
+                    
+                    <div class="slide-logo"><div class="logo-wrapper"><img src="assets/Images/012.jpeg" alt="شريك نجاح"></div></div>
+                    <div class="slide-logo"><div class="logo-wrapper"><img src="assets/Images/013.jpeg" alt="شريك نجاح"></div></div>
+                    <div class="slide-logo"><div class="logo-wrapper"><img src="assets/Images/022.jpeg" alt="شريك نجاح"></div></div>
+                    <div class="slide-logo"><div class="logo-wrapper"><img src="assets/Images/028.jpeg" alt="شريك نجاح"></div></div>
+                    <div class="slide-logo"><div class="logo-wrapper"><img src="assets/Images/029.png" alt="شريك نجاح"></div></div>
+                    <div class="slide-logo"><div class="logo-wrapper"><img src="assets/Images/001.jpeg" alt="شريك نجاح"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نحن في أرقام (Our Numbers) -->
+    <section class="numbers-section" id="OurNumbers">
+        <div class="container">
+            <div class="numbers-grid">
+                <div class="number-card reveal">
+                    <div class="number-val" data-target="1200">+0</div>
+                    <p data-i18n="number_1_text">خدمة كاترينق منوعة</p>
+                    <span data-i18n="number_1_sub">(قهوة، عطور، حلويات)</span>
+                </div>
+                <div class="number-card reveal">
+                    <div class="number-val" data-target="3">+0</div>
+                    <p data-i18n="number_2_text">سنوات من التميز والريادة</p>
+                    <span data-i18n="number_2_sub">(منذ تأسيسنا في 2023)</span>
+                </div>
+                <div class="number-card reveal">
+                    <div class="number-val" data-target="100">%0</div>
+                    <p data-i18n="number_3_text">نسبة رضا عملائنا</p>
+                    <span data-i18n="number_3_sub">ضمان الجودة والاحترافية</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تواصل معنا / طلب السعر (Contact & Quote Form) -->
+    <section class="contact-section" id="Contact">
+        <div class="container grid-2">
+            
+            <!-- نموذج طلب عرض سعر -->
+            <div class="quote-form-container reveal">
+                <h3 data-i18n="form_title">احصل على عرض سعر لمناسبتك</h3>
+                <form id="quote-form" class="quote-form">
+                    <div class="form-group">
+                        <label for="name" data-i18n="form_name_label">الاسم الكريم</label>
+                        <input type="text" id="name" required placeholder="أدخل اسمك الكامل" data-i18n-placeholder="form_name_placeholder">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" data-i18n="form_phone_label">رقم الجوال</label>
+                            <input type="tel" id="phone" required placeholder="05xxxxxxxx" data-i18n-placeholder="form_phone_placeholder">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="form_email_label">البريد الإلكتروني</label>
+                            <input type="email" id="email" required placeholder="name@example.com" data-i18n-placeholder="form_email_placeholder">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service" data-i18n="form_service_label">الخدمة المطلوبة</label>
+                        <select id="service" required>
+                            <option value="" disabled selected data-i18n="form_service_select">اختر الخدمة...</option>
+                            <option value="coffee" data-i18n="form_opt_coffee">كاترينق القهوة المختصة</option>
+                            <option value="perfume" data-i18n="form_opt_perfume">كاترينق العطور الراقية</option>
+                            <option value="cups" data-i18n="form_opt_cups">تصاميم أكواب خاصة وطباعة</option>
+                            <option value="chocolate" data-i18n="form_opt_chocolate">نافورة الشوكولاتة والفواكه</option>
+                            <option value="all" data-i18n="form_opt_all">باقة متكاملة (كل الخدمات)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="form_message_label">تفاصيل المناسبة (التاريخ، المكان، عدد الحضور)</label>
+                        <textarea id="message" rows="4" placeholder="اكتب هنا أي تفاصيل إضافية..." data-i18n-placeholder="form_message_placeholder"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submit-btn"><span data-i18n="form_submit">إرسال الطلب الآن</span> <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+            <!-- معلومات التواصل المباشر ووسائل التواصل -->
+            <div class="contact-info-container reveal">
+                <p class="contact-heading" data-i18n="contact_heading">تواصل معنا مباشرة</p>
+                <div class="contact-methods">
+                    <a href="https://wa.me/966560595054" class="contact-method-card" target="_blank">
+                        <div class="method-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
+                        <div class="method-details">
+                            <span data-i18n="contact_wa_span">واتساب مباشرة</span>
+                            <strong>+966 56 059 5054</strong>
+                        </div>
+                    </a>
+                    <a href="mailto:rizancoffee@gmail.com" class="contact-method-card">
+                        <div class="method-icon email"><i class="far fa-envelope"></i></div>
+                        <div class="method-details">
+                            <span data-i18n="contact_email_span">البريد الإلكتروني</span>
+                            <strong>rizancoffee@gmail.com</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="social-channels">
+                    <h4 data-i18n="contact_follow">تابعنا على شبكاتنا الاجتماعية</h4>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/rizan_cafe" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@rizan_cafe" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" target="_blank" title="Snapchat"><i class="fab fa-snapchat"></i></a>
+                        <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="qr-code-box">
+                    <p data-i18n="contact_qr_text">امسح الكود لطلب الخدمة وحفظ بيانات الاتصال</p>
+                    <img src="assets/Images/029.png" alt="Rizan QR Code" class="qr-image">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- الفوتر (Footer) -->
+    <footer class="footer-bottom">
+        <div class="container">
+            <p data-i18n="footer_text">جميع الحقوق محفوظة &copy; 2026 ريزان كافيه Rizan Cafe | تصميم وتطوير احترافي</p>
+        </div>
+    </footer>
+
+    <!-- ملف الجافا سكريبت -->
     <script src="js/main.js"></script>
 </body>
 
