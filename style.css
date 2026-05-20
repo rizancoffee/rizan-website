@@ -926,8 +926,9 @@ body.dark-theme .vision-card:hover {
 
 .carousel-track {
     display: flex;
-    width: calc(240px * 12);
-    animation: scroll 35s linear infinite;
+    /* 18 slides (9 original + 9 clones) x 240px each */
+    width: calc(240px * 18);
+    animation: scroll 40s linear infinite;
 }
 
 .slide-logo {
@@ -978,7 +979,8 @@ body.dark-theme .logo-wrapper {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-240px * 6));
+        /* Move exactly one set of 9 logos = 9 x 240px */
+        transform: translateX(calc(-240px * 9));
     }
 }
 
