@@ -10,7 +10,7 @@ const translations = {
         nav_vision: "الرؤية والرسالة",
         nav_services: "خدماتنا",
         nav_targets: "الفئات المستهدفة",
-        nav_partners: "عملائنا",
+        nav_partners: "عملاؤنا",
         nav_numbers: "أرقامنا",
         nav_contact: "تواصل معنا",
         cta_quote: "طلب عرض سعر",
@@ -19,6 +19,7 @@ const translations = {
         hero_tagline: "نتميز في تقديم مشروبات القهوة المختصة وخدمة الكورنر المتنقل",
         hero_btn: "اكتشف خدماتنا",
         story_title: "القصة",
+        story_tagline: "بدأت كفكرة، وأصبحت علامة",
         story_p1: "بدأت الرحلة كفكرة للعمل على تطوير خدمات تقديم القهوة والمشروبات الباردة في المؤتمرات والحفلات والمناسبات النسائية.",
         story_p2: "ومن ثم استمعنا بعناية لاحتياجات السوق ووجدنا الفرصة لتقديم خدمتنا كاترينق متنقل للقهوة المختصة.",
         story_p3: "في عام 2023 تأسست إدارة خدمة الكاترينق المتنقل على يد رائدة أعمال أرادت إحداث تغيير في طريقة تقديم القهوة في المملكة العربية السعودية. ومن خلال حرصها على الممارسات التجارية الذكية توصل فريق RIZAN CAFE إلى فكرة تحويل المقهى إلى كورنر متنقل بحيث نوفر لكم كافي متكامل داخل مقر مناسبتك.",
@@ -65,7 +66,7 @@ const translations = {
         target_g5: "الصالونات النسائية",
         target_g6: "المستشفيات",
         target_g7: "الجامعات والمدارس",
-        partners_title: "شركاء نجاحنا",
+        partners_title: "عملاؤنا",
         partners_subtitle: "فخورون بثقة كبرى الجهات والشركات بنا",
         number_1_text: "خدمة كاترينق منوعة",
         number_1_sub: "(قهوة، عطور، حلويات)",
@@ -94,7 +95,7 @@ const translations = {
         contact_wa_span: "واتساب مباشرة",
         contact_email_span: "البريد الإلكتروني",
         contact_follow: "تابعنا على شبكاتنا الاجتماعية",
-        contact_qr_text: "امسح الكود لطلب الخدمة وحفظ بيانات الاتصال",
+        contact_qr_text: "امسح الكود لمتابعتنا على انستقرام",
         footer_text: "جميع الحقوق محفوظة &copy; 2026 ريزان كافيه Rizan Cafe | تصميم وتطوير احترافي"
     },
     en: {
@@ -114,6 +115,7 @@ const translations = {
         hero_tagline: "We excel in providing specialty coffee drinks and mobile corner services",
         hero_btn: "Explore Services",
         story_title: "Our Story",
+        story_tagline: "Started as an idea, became a brand",
         story_p1: "The journey began as an idea to develop catering services for coffee and cold beverages in conferences, events, and ladies parties.",
         story_p2: "Then we carefully listened to the market needs and found the opportunity to offer our service as mobile specialty coffee catering.",
         story_p3: "In 2023, the mobile catering service was founded by a female entrepreneur who wanted to make a change in the way coffee is served in the Kingdom of Saudi Arabia. Through smart business practices, the Rizan Cafe team realized the concept of bringing a fully integrated cafe corner inside your event venue.",
@@ -189,7 +191,7 @@ const translations = {
         contact_wa_span: "WhatsApp Directly",
         contact_email_span: "Email Address",
         contact_follow: "Follow Us on Social Media",
-        contact_qr_text: "Scan code to request service and save contact details",
+        contact_qr_text: "Scan code to follow us on Instagram",
         footer_text: "All rights reserved &copy; 2026 Rizan Cafe | Professional Design & Development"
     }
 };
@@ -392,54 +394,98 @@ window.addEventListener('scroll', animateCounters);
 animateCounters();
 
 // ==========================================
-// 7. معالجة نموذج طلب عرض السعر تفاعلياً (Quote Form Handling)
+// 7. معالجة نموذج طلب عرض السعر — إرسال عبر واتساب (Quote Form → WhatsApp)
 // ==========================================
 const quoteForm = document.getElementById('quote-form');
 
 if (quoteForm) {
     quoteForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const submitBtn = quoteForm.querySelector('.submit-btn');
         const originalText = submitBtn.innerHTML;
         const currentLang = localStorage.getItem('lang') || 'ar';
-        
-        const loadingText = currentLang === 'ar' ? 'جاري إرسال طلبك... <i class="fas fa-spinner fa-spin"></i>' : 'Sending request... <i class="fas fa-spinner fa-spin"></i>';
-        const successButtonText = currentLang === 'ar' ? 'تم الإرسال بنجاح! <i class="fas fa-check"></i>' : 'Sent successfully! <i class="fas fa-check"></i>';
-        const successMessageText = currentLang === 'ar' 
-            ? 'شكرًا لتواصلك معنا! سنقوم بالرد عليك وتزويدك بعرض السعر المناسب في أقرب وقت.' 
-            : 'Thank you for contacting us! We will get back to you with the quote as soon as possible.';
-        
+
+        // جمع بيانات الفورم
+        const name    = (document.getElementById('name')    || {}).value || '';
+        const phone   = (document.getElementById('phone')   || {}).value || '';
+        const email   = (document.getElementById('email')   || {}).value || '';
+        const service = (document.getElementById('service') || {}).value || '';
+        const message = (document.getElementById('message') || {}).value || '';
+
+        // خريطة قيم الخدمة → نص مقروء
+        const serviceMap = {
+            coffee:    currentLang === 'ar' ? 'كاترينق القهوة'          : 'Coffee Catering',
+            perfume:   currentLang === 'ar' ? 'كاترينق العطور'          : 'Perfume Catering',
+            cups:      currentLang === 'ar' ? 'تصاميم أكواب خاصة'       : 'Custom Cups & Printing',
+            chocolate: currentLang === 'ar' ? 'نافورة الشوكولاتة'       : 'Chocolate Fountain',
+            all:       currentLang === 'ar' ? 'جميع الخدمات'            : 'All Services',
+        };
+        const serviceText = serviceMap[service] || service;
+
+        // بناء رسالة الواتساب
+        let waMsg;
+        if (currentLang === 'ar') {
+            waMsg =
+`*طلب عرض سعر — RIZAN CAFE*
+
+*الاسم:* ${name}
+*الجوال:* ${phone}
+${email ? `*البريد:* ${email}\n` : ''}*الخدمة المطلوبة:* ${serviceText}
+${message ? `*التفاصيل:*\n${message}\n` : ''}
+تم الإرسال من موقع RIZAN CAFE`;
+        } else {
+            waMsg =
+`*Quote Request — RIZAN CAFE*
+
+*Name:* ${name}
+*Phone:* ${phone}
+${email ? `*Email:* ${email}\n` : ''}*Service:* ${serviceText}
+${message ? `*Details:*\n${message}\n` : ''}
+Sent via RIZAN CAFE website`;
+        }
+
+        // تأثير التحميل
+        const loadingText = currentLang === 'ar'
+            ? 'جاري فتح واتساب... <i class="fab fa-whatsapp fa-spin"></i>'
+            : 'Opening WhatsApp... <i class="fab fa-whatsapp fa-spin"></i>';
+
         submitBtn.innerHTML = loadingText;
         submitBtn.disabled = true;
-        
+
         setTimeout(() => {
+            // فتح واتساب مع الرسالة المُعبأة
+            const waNumber = '966560595054';
+            const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMsg)}`;
+            window.open(waUrl, '_blank');
+
+            // إعادة ضبط الزر والفورم
+            const successButtonText = currentLang === 'ar'
+                ? 'تم! <i class="fab fa-whatsapp"></i>'
+                : 'Done! <i class="fab fa-whatsapp"></i>';
             submitBtn.innerHTML = successButtonText;
             submitBtn.style.backgroundColor = '#25D366';
             submitBtn.style.color = '#fff';
-            
+
             const successMsg = document.createElement('div');
             successMsg.className = 'form-success-msg';
-            successMsg.style.color = '#25D366';
-            successMsg.style.marginTop = '15px';
-            successMsg.style.fontWeight = 'bold';
-            successMsg.style.textAlign = 'center';
-            successMsg.style.fontSize = '1.05em';
-            successMsg.style.animation = 'fadeInUp 0.5s ease-out';
-            successMsg.innerHTML = successMessageText;
-            
+            successMsg.style.cssText = 'color:#25D366;margin-top:15px;font-weight:bold;text-align:center;font-size:1.05em;animation:fadeInUp 0.5s ease-out';
+            successMsg.innerHTML = currentLang === 'ar'
+                ? '✅ تم فتح واتساب بتفاصيل طلبك! أرسل الرسالة لإتمام الطلب.'
+                : '✅ WhatsApp opened with your request details! Send the message to complete.';
+
             quoteForm.appendChild(successMsg);
             quoteForm.reset();
-            
+
             setTimeout(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.style.backgroundColor = '';
                 submitBtn.style.color = '';
                 submitBtn.disabled = false;
                 successMsg.remove();
-            }, 5000);
-            
-        }, 1500);
+            }, 6000);
+
+        }, 1000);
     });
 }
 
